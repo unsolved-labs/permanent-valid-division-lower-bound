@@ -1,0 +1,54 @@
+{
+  "obligations": [
+    {
+      "id": "O1",
+      "statement": "OpenAI's permanent construction yields a square polynomial map F0:C^k->C^k of degree d-1 with F0^{-1}(0)={0}, hence a fibre with (d-1)^k distinct simple points.",
+      "status": "primary-source-verified",
+      "source": "OpenAI 2026, Chapter 5, Lemmas 4.1-4.2 and Proposition 4.3"
+    },
+    {
+      "id": "O2",
+      "statement": "Baur-Strassen applies over the rational-function field and computes f and all first partial derivatives with at most three times the nonscalar multiplication/division complexity.",
+      "status": "primary-source-verified",
+      "source": "Baur-Strassen 1983, Theorem 1 (and Theorem 2 for operation-count refinement)"
+    },
+    {
+      "id": "O3",
+      "statement": "A valid rational circuit with q nonlinear multiplication/division gates whose polynomial output fibre contains M isolated points in the circuit regularity domain satisfies M <= 2^q.",
+      "status": "deductive-audit-pass",
+      "basis": "quadratic multiplication/division graph equations plus the same isolated-solution affine Bezout bound used in OpenAI Lemma 4.1"
+    },
+    {
+      "id": "O4",
+      "statement": "For each nonzero ambient numerator/denominator polynomial p, translations t for which p(Bu+c0+t) vanishes identically form a proper Zariski-closed set; finitely many such sets can be avoided by arbitrarily small t.",
+      "status": "deductive-audit-pass"
+    },
+    {
+      "id": "O5",
+      "statement": "The (d-1)^k distinct simple fibre points persist as distinct simple local branches under sufficiently small translation.",
+      "status": "standard-theorem-verified",
+      "basis": "holomorphic implicit/inverse function theorem applied independently at the finitely many simple roots"
+    },
+    {
+      "id": "O6",
+      "statement": "After a pole-avoiding translation, the pole locus Z has dimension at most k-1 and the Zariski closure of G(Z) has dimension at most k-1; therefore a nearby target avoids every pole while retaining all (d-1)^k simple local preimages.",
+      "status": "deductive-audit-pass",
+      "basis": "hypersurface dimension plus Stacks Project Lemma 33.20.4 componentwise"
+    },
+    {
+      "id": "O7",
+      "statement": "O2-O6 imply (d-1)^k <= 2^(3s), hence s >= k log2(d-1)/3.",
+      "status": "machine-checked"
+    },
+    {
+      "id": "O8",
+      "statement": "OpenAI's explicit parameters give k >= n^2/48 and log2(d-1) >= log2(log2 n)-3 for n>=2^16, yielding the coefficient 1/144.",
+      "status": "primary-source-and-machine-checked"
+    },
+    {
+      "id": "O9",
+      "statement": "As of 2026-08-14, the current OpenAI paper expressly excludes circuits with division and a fresh primary-source search located no theorem matching this valid-division extension.",
+      "status": "fresh-novelty-search-pass"
+    }
+  ]
+}
