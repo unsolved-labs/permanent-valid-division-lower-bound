@@ -17,3 +17,4 @@ jobs:
       - run: python verify.py
       - run: python verify_independent.py
       - run: python stress_rational_circuits.py
+      - run: python verify_publication.py
