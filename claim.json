@@ -1,0 +1,14 @@
+{
+  "title": "Permanent lower bound for valid arithmetic circuits with division",
+  "field": "C",
+  "threshold_n": 65536,
+  "constant_denominator": 144,
+  "circuit_model": {
+    "operations": ["+", "-", "*", "/"],
+    "validity": "at every division gate, the divisor is a nonzero rational function in C(x_11,...,x_nn)",
+    "cost": "nonscalar multiplication/division complexity; additions, subtractions, and scalar operations are free"
+  },
+  "claim": "For every integer n >= 65536, every valid arithmetic circuit over C computing per_n has nonscalar multiplication/division complexity s >= (n^2/144) * (log2(log2(n)) - 3). Consequently every ordinary valid arithmetic circuit computing per_n has at least this many arithmetic gates.",
+  "asymptotic": "Omega(n^2 log log n)",
+  "review_status": "pending"
+}
